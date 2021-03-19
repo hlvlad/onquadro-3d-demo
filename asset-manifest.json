@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/onquadro-3d-demo/static/css/main.a86f472c.chunk.css",
+    "main.js": "/onquadro-3d-demo/static/js/main.2c9f6e71.chunk.js",
+    "main.js.map": "/onquadro-3d-demo/static/js/main.2c9f6e71.chunk.js.map",
+    "runtime-main.js": "/onquadro-3d-demo/static/js/runtime-main.675ed245.js",
+    "runtime-main.js.map": "/onquadro-3d-demo/static/js/runtime-main.675ed245.js.map",
+    "static/css/2.9e05a0d9.chunk.css": "/onquadro-3d-demo/static/css/2.9e05a0d9.chunk.css",
+    "static/js/2.243f91a6.chunk.js": "/onquadro-3d-demo/static/js/2.243f91a6.chunk.js",
+    "static/js/2.243f91a6.chunk.js.map": "/onquadro-3d-demo/static/js/2.243f91a6.chunk.js.map",
+    "index.html": "/onquadro-3d-demo/index.html",
+    "static/css/2.9e05a0d9.chunk.css.map": "/onquadro-3d-demo/static/css/2.9e05a0d9.chunk.css.map",
+    "static/css/main.a86f472c.chunk.css.map": "/onquadro-3d-demo/static/css/main.a86f472c.chunk.css.map",
+    "static/js/2.243f91a6.chunk.js.LICENSE.txt": "/onquadro-3d-demo/static/js/2.243f91a6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.675ed245.js",
+    "static/css/2.9e05a0d9.chunk.css",
+    "static/js/2.243f91a6.chunk.js",
+    "static/css/main.a86f472c.chunk.css",
+    "static/js/main.2c9f6e71.chunk.js"
+  ]
+}
