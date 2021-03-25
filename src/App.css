@@ -1,7 +1,7 @@
 
 .App {
     display: grid;
-    grid-template: calc(100vh - 4em) / 1fr 1fr;
+    grid-template: calc(100vh - 4em) / 1fr 4fr;
     grid-column-gap: 1em;
     margin: 2em;
 }
