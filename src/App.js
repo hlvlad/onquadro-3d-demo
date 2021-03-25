@@ -13,7 +13,7 @@ function App() {
     const [uniformColor, setUniformColor] = useState({r:251, g:158, b:0})
 
     function getStructure() {
-        fetch('data/coordinatest .cif')
+        fetch('data/coordinates.cif')
             .then(function(res) {
                 return res.text()
             })
