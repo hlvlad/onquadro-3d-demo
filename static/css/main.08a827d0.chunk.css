@@ -1,0 +1,2 @@
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}code{font-family:source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace}.App{display:grid;grid-template:calc(100vh - 4em)/1fr 4fr;grid-column-gap:1em;margin:2em}#viewer3d-wrapper{position:relative;width:100%;grid-column:2/3}#viewer3d{position:absolute;top:0;left:0;width:100%;height:100%}
+/*# sourceMappingURL=main.08a827d0.chunk.css.map */
