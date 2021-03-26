@@ -11,11 +11,6 @@ import {DefaultPluginUISpec, PluginUISpec} from "molstar/lib/mol-plugin-ui/spec"
 import {createPlugin} from "molstar/lib/mol-plugin-ui";
 import {Color} from "molstar/lib/mol-util/color";
 
-function HEXToVBColor(rrggbb: string) {
-    var bbggrr = rrggbb.substr(4, 2) + rrggbb.substr(2, 2) + rrggbb.substr(0, 2);
-    return parseInt(bbggrr, 16);
-}
-
 type RepresentationParams = {
     type: "ball-and-stick" | "cartoon" | "putty",
     coloring: "uniform" | "element-symbol",
@@ -62,6 +57,7 @@ export class MolstarDemoViewer {
         const {type, coloring, uniformColor} = reprParams;
         let props: StructureRepresentationBuiltInProps = {
             type: type,
+            typeParams: {visuals: ['nucleotide-block']},
             color: coloring,
             size: 'uniform',
             sizeParams: {value: 2.0}
@@ -69,7 +65,7 @@ export class MolstarDemoViewer {
         if (coloring === 'uniform') {
             props.colorParams = { value: Color.fromRgb(uniformColor.r, uniformColor.g, uniformColor.b)}
         }
-        const repr = createStructureRepresentationParams(this.plugin, void 0, props);
+        const repr = createStructureRepresentationParams(this.plugin, structure.data, props);
         this.currentStructure = await this.plugin.build().to(structure).apply(StateTransforms.Representation.StructureRepresentation3D, repr).commit();
     }
 
@@ -77,6 +73,7 @@ export class MolstarDemoViewer {
         const {type, coloring, uniformColor} = reprParams;
         let props: StructureRepresentationBuiltInProps = {
             type: type,
+            typeParams: {visuals: ['nucleotide-block']},
             color: coloring,
             size: 'uniform',
             sizeParams: {value: 2.0}
@@ -84,7 +81,7 @@ export class MolstarDemoViewer {
         if (coloring === 'uniform') {
             props.colorParams = { value: Color.fromRgb(uniformColor.r, uniformColor.g, uniformColor.b)}
         }
-        const newRepresenation = createStructureRepresentationParams(this.plugin, void 0, props);
+        const newRepresenation = createStructureRepresentationParams(this.plugin, this.currentStructure.data, props);
         console.log(`Trying to update structure 3D Representation to ${type}`)
         await this.plugin.build().to(this.currentStructure).update(newRepresenation).commit();
     }

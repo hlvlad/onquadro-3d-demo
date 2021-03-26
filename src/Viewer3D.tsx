@@ -14,7 +14,7 @@ const Viewer3D = ({id, structure3d, structure3dRepresentation, structure3dColori
     const parent = useRef<HTMLDivElement>(null);
     const [viewer, setViewer] = useState<MolstarDemoViewer | null>(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (parent.current !== null) {
             let viewer = new MolstarDemoViewer(parent.current);
             setViewer(viewer);
