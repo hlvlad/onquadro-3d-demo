@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/onquadro-3d-demo/static/css/main.08a827d0.chunk.css",
-    "main.js": "/onquadro-3d-demo/static/js/main.fbbedf7b.chunk.js",
-    "main.js.map": "/onquadro-3d-demo/static/js/main.fbbedf7b.chunk.js.map",
+    "main.js": "/onquadro-3d-demo/static/js/main.ce423dcb.chunk.js",
+    "main.js.map": "/onquadro-3d-demo/static/js/main.ce423dcb.chunk.js.map",
     "runtime-main.js": "/onquadro-3d-demo/static/js/runtime-main.675ed245.js",
     "runtime-main.js.map": "/onquadro-3d-demo/static/js/runtime-main.675ed245.js.map",
     "static/css/2.fef5a65c.chunk.css": "/onquadro-3d-demo/static/css/2.fef5a65c.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.fef5a65c.chunk.css",
     "static/js/2.19a63b1d.chunk.js",
     "static/css/main.08a827d0.chunk.css",
-    "static/js/main.fbbedf7b.chunk.js"
+    "static/js/main.ce423dcb.chunk.js"
   ]
 }
