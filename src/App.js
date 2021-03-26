@@ -8,7 +8,7 @@ import {CompactPicker} from "react-color";
 
 function App() {
     const [structure3d, setStructure3d] = useState(null);
-    const [structure3dRepresentation, setStructure3dRepresentation] = useState("ball-and-stick");
+    const [structure3dRepresentation, setStructure3dRepresentation] = useState("cartoon");
     const [structure3dColoring, setStructure3dColoring] = useState("element-symbol");
     const [uniformColor, setUniformColor] = useState({r:251, g:158, b:0})
 

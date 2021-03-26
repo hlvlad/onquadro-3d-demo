@@ -57,13 +57,15 @@ export class MolstarDemoViewer {
         const {type, coloring, uniformColor} = reprParams;
         let props: StructureRepresentationBuiltInProps = {
             type: type,
-            typeParams: {visuals: ['nucleotide-block']},
             color: coloring,
             size: 'uniform',
             sizeParams: {value: 2.0}
         }
         if (coloring === 'uniform') {
             props.colorParams = { value: Color.fromRgb(uniformColor.r, uniformColor.g, uniformColor.b)}
+        }
+        if (type === 'cartoon') {
+            props.typeParams = {visuals: ['nucleotide-block']}
         }
         const repr = createStructureRepresentationParams(this.plugin, structure.data, props);
         this.currentStructure = await this.plugin.build().to(structure).apply(StateTransforms.Representation.StructureRepresentation3D, repr).commit();
@@ -73,7 +75,6 @@ export class MolstarDemoViewer {
         const {type, coloring, uniformColor} = reprParams;
         let props: StructureRepresentationBuiltInProps = {
             type: type,
-            typeParams: {visuals: ['nucleotide-block']},
             color: coloring,
             size: 'uniform',
             sizeParams: {value: 2.0}
@@ -81,7 +82,13 @@ export class MolstarDemoViewer {
         if (coloring === 'uniform') {
             props.colorParams = { value: Color.fromRgb(uniformColor.r, uniformColor.g, uniformColor.b)}
         }
-        const newRepresenation = createStructureRepresentationParams(this.plugin, this.currentStructure.data, props);
+        if (type === 'cartoon') {
+            props.typeParams = {visuals: ['nucleotide-block']}
+        }
+        if (type === 'putty') {
+            props.typeParams = {visuals: ['polymer-tube']}
+        }
+        const newRepresenation = createStructureRepresentationParams(this.plugin, void 0, props);
         console.log(`Trying to update structure 3D Representation to ${type}`)
         await this.plugin.build().to(this.currentStructure).update(newRepresenation).commit();
     }
